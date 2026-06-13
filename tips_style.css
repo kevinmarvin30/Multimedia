@@ -1,0 +1,204 @@
+/* Reset & Base Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfaf6; /* Background cream bersih Cook2Go */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #f0ead6;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #6a5e39;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6a5e39;
+}
+
+/* Container Utama */
+.page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 5% 100px;
+}
+
+/* Header Halaman (Hero) */
+.page-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sub-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8c7b4f;
+    font-weight: 600;
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    margin: 15px 0;
+}
+
+.page-hero p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid Artikel Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.tip-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.tip-content {
+    padding: 30px;
+}
+
+.tip-category {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #8c7b4f;
+    font-weight: 600;
+}
+
+.tip-content h2 {
+    font-size: 1.5rem;
+    margin: 10px 0 15px;
+}
+
+.tip-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.read-more {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6a5e39;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.read-more:hover {
+    border-bottom: 1px solid #6a5e39;
+}
+
+/* Footer & Navigasi Bawah (Dengan Animasi) */
+.simple-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+    border-top: 1px solid #f0ead6;
+    background-color: #fcf9f4;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+/* Efek Garis Bawah Footer */
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #7b6338;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.footer-link:hover, .footer-link.active {
+    color: #7b6338;
+}
+
+.footer-link:hover::after, .footer-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Responsive Tablet & Mobile */
+@media (max-width: 768px) {
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}

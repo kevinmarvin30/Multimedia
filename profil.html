@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CulinaryArt - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profil_style.css">
+    <style>
+        .video-indicator { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.6); color: white; border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+        .add-ingredient { display: flex; gap: 8px; } 
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">CulinaryArt</div>
+        <nav class="nav-links">
+            <a href="categories.html">Categories</a>
+            <a href="collection.html">My Collection</a>
+            <a href="foodlist.html">Food List</a>
+            <a href="#" class="active" aria-current="page">Profile</a>
+        </nav>
+        <div class="nav-icons">
+            <button class="icon-btn" aria-label="Search">🔍</button>
+            <button class="icon-btn" aria-label="User Menu">👤</button>
+        </div>
+    </header>
+
+    <section class="profile-hero">
+        <div class="profile-container">
+            <div class="profile-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500" alt="Profile picture of Elena Rossi" class="profile-img">
+                <button class="edit-btn" aria-label="Edit Profile">📝</button>
+            </div>
+            
+            <div class="profile-info">
+                <span class="user-level">GOURMET ENTHUSIAST • LEVEL 4</span>
+                <h1>Elena Rossi</h1>
+                <p class="bio">"Passionate home cook specializing in Mediterranean-Asian fusion. Believer in slow food, organic ingredients, and the magic of a perfectly tempered spice blend. Curating a digital library of sensory memories."</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <strong>42</strong>
+                        <span>VIDEOS</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>1.2k</strong>
+                        <span>FOLLOWERS</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>15</strong>
+                        <span>GUIDES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="tabs-container">
+        <div class="profile-tabs" role="tablist">
+            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-recipes">🍴 My Recipes</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-guides">📁 Saved Guides</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-bookmarks">🔖 Bookmarks</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-shopping">🛒 Shopping List</button>
+            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-settings">⚙️ Settings</button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        
+        <div class="collection-section" id="panel-recipes" role="tabpanel">
+            <div class="section-header">
+                <h2>The Collection</h2>
+                <button class="btn-text">+ Create New</button>
+            </div>
+
+            <div class="recipe-card featured">
+                <div class="img-wrapper">
+                    <span class="tag top-left">Featured Video</span>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800" alt="Summer Heirloom Salad Preparation">
+                    <div class="video-indicator" aria-hidden="true">▶</div>
+                    <span class="tag bottom-left text-white">25 MIN • 12K VIEWS</span>
+                </div>
+                <div class="card-text">
+                    <h3>Summer Heirloom Salad</h3>
+                    <p>A refreshing mix of sun-ripened tomatoes and freshly picked organic garden herbs from the Tuscan coast.</p>
+                </div>
+            </div>
+
+            <div class="recipe-grid">
+                <div class="recipe-card small">
+                    <div class="img-wrapper">
+                        <span class="tag top-right dark-bg">45 MIN</span>
+                        <img src="https://images.unsplash.com/photo-1599333917524-7f85888d37ce?w=400" alt="Pan-Seared Scallops Cooking Process">
+                        <div class="video-indicator" aria-hidden="true">▶</div>
+                    </div>
+                    <div class="card-text">
+                        <h3>Pan-Seared Scallops</h3>
+                        <span class="rating">⭐ 4.9 (850 views)</span>
+                        <p>Butter-basted premium scallops with a light lemon-herb reduction.</p>
+                    </div>
+                </div>
+
+                <div class="recipe-card small">
+                    <div class="img-wrapper">
+                        <span class="tag top-right dark-bg">15 MIN</span>
+                        <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=400" alt="Artisan Carbonara Recipe">
+                        <div class="video-indicator" aria-hidden="true">▶</div>
+                    </div>
+                    <div class="card-text">
+                        <h3>Artisan Carbonara</h3>
+                        <span class="rating">⭐ 5.0 (2.1k views)</span>
+                        <p>Traditional Roman method using only egg yolks and pecorino.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <div class="pantry-widget">
+                <div class="widget-header">
+                    <h3>🛒 Pantry List</h3>
+                    <button class="icon-btn-small" aria-label="Pantry Options">⋮</button>
+                </div>
+
+                <form class="add-ingredient" onsubmit="event.preventDefault();">
+                    <input type="text" placeholder="Add ingredient..." aria-label="Add new ingredient" required>
+                    <button type="submit" class="btn-add" aria-label="Add to pantry">+</button>
+                </form>
+
+                <div class="pantry-category">
+                    <h4>PRODUCE</h4>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Heirloom Tomatoes (3 large)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Fresh Basil Bunch
+                    </label>
+                </div>
+
+                <div class="pantry-category">
+                    <h4>DAIRY & DELI</h4>
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Feta Cheese (200g)
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        <span class="strikethrough">Guanciale (150g)</span>
+                    </label>
+                </div>
+
+                <button class="btn-whatsapp">✆ Share via WhatsApp</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <h3>CulinaryArt</h3>
+            <p>The journal for modern organic cooking. Curate your digital pantry and share your culinary journey with a community of refined home chefs.</p>
+            <p class="copyright">© 2024 CULINARYART.</p>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>INSPIRATION</h4>
+                <ul>
+                    <li><a href="#">Culinary Tips</a></li>
+                    <li><a href="#">Seasonal Guides</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>COMMUNITY</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

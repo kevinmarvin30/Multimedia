@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection - The Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="collection_style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Cook2Go</div>
+        <nav class="nav-links">
+            <a href="categories.html">Categories</a>
+            <a href="#" class="active">My Collection</a>
+            <a href="foodlist.html">Food List</a>
+            <a href="profil.html">Profile</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search your vault...">
+        </div>
+    </header>
+
+    <main class="collection-container">
+        
+        <aside class="filter-sidebar">
+            <div class="sidebar-header">
+                <h3>Filter Gallery</h3>
+                <p>Refine your cravings</p>
+            </div>
+
+            <div class="filter-group">
+                <h4>Cuisine</h4>
+                <div class="pill-group">
+                    <button class="pill">Asian</button>
+                    <button class="pill">French</button>
+                    <button class="pill active">Italian</button>
+                    <button class="pill">Mexican</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4>Preparation Time</h4>
+                <label class="radio-container">
+                    <input type="radio" name="prep-time">
+                    <span class="radio-mark"></span>
+                    < 30 Mins
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="prep-time" checked>
+                    <span class="radio-mark"></span>
+                    30 - 60 Mins
+                </label>
+                <label class="radio-container">
+                    <input type="radio" name="prep-time">
+                    <span class="radio-mark"></span>
+                    Over 1 Hour
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Key Ingredient</h4>
+                <div class="input-with-icon">
+                    <input type="text" placeholder="e.g. Saffron, Basil">
+                    <span>🔍</span>
+                </div>
+            </div>
+
+            <button class="btn-apply">Apply Selection</button>
+        </aside>
+
+        <section class="vault-content">
+            <div class="vault-header">
+                <div>
+                    <h1>The Vault</h1>
+                    <p>Your curated collection of culinary masterpieces</p>
+                </div>
+                <div class="view-toggles">
+                    <button class="toggle-btn active">𝄘</button>
+                    <button class="toggle-btn">⊞</button>
+                </div>
+            </div>
+
+            <div class="featured-card">
+                <div class="card-overlay">
+                    <span class="tag-pill">FEATURED RECIPE</span>
+                    <h2>Handcrafted<br>Fettuccine</h2>
+                    <p>Experience the soul of Italian cuisine with our signature handmade dough, kneaded and...</p>
+                    <div class="meta-info">
+                        <span>⏱ 45 Mins</span>
+                        <span>🔥 Intermediate</span>
+                    </div>
+                </div>
+                <button class="heart-btn">🤍</button>
+            </div>
+
+            <div class="vault-grid">
+                <div class="recipe-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500" alt="Nourish Bowl">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title-row">
+                            <h3>Nourish Bowl</h3>
+                            <button class="heart-btn-small">🤍</button>
+                        </div>
+                        <p>A vibrant collision of complex carbs, healthy fats, and fresh greens for a revitalizing lunch.</p>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=500" alt="Margherita Pizza">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-title-row">
+                            <h3>Artisan Margherita</h3>
+                            <button class="heart-btn-small">🤍</button>
+                        </div>
+                        <p>Mastering the high-hydration dough for that perfect, airy crust with simple toppings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="special-card">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c8a9e9cb?w=400" alt="Gelato">
+                <div class="special-content">
+                    <span class="sub-tag">DESSERT</span>
+                    <h3>Vanilla Bean Gelato</h3>
+                    <p>A slow-churned classic requiring patience, yielding an incredibly rich and smooth texture that defines elegance.</p>
+                    <div class="special-footer">
+                        <div class="meta">
+                            <div><small>TIME</small><br><strong>2 Hours</strong></div>
+                            <div><small>YIELDS</small><br><strong>6-8 People</strong></div>
+                        </div>
+                        <a href="#" class="view-link">View Entry &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more-container">
+                <button class="btn-outline">Load More Discoveries</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="complex-footer">
+        <div class="footer-brand">
+            <p>Celebrating the art of cooking through thoughtful recipes and beautiful stories.</p>
+            <div class="social-icons">
+                <span class="icon">🔗</span>
+                <span class="icon">✉️</span>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Culinary Tips</a></li>
+                    <li><a href="#">Seasonal Picks</a></li>
+                    <li><a href="#">Interviews</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Food List</a></li>
+                    <li><a href="#">Ingredients Guide</a></li>
+                    <li><a href="#">Techniques</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Refining culinary explorations</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Email">
+                <button>→</button>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

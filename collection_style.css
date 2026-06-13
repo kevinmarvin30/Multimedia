@@ -1,0 +1,475 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fcf9f4; /* Cream background */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #2c2c2c;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #f0eadd;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+}
+
+.nav-links a.active {
+    color: #6a5e39; /* Olive text */
+    border-bottom: 2px solid #6a5e39;
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #e0d9cb;
+    background-color: #fff;
+    outline: none;
+    width: 250px;
+}
+
+/* Main Layout */
+.collection-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Sidebar Styles */
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.sidebar-header h3 {
+    font-size: 1.5rem;
+}
+
+.sidebar-header p {
+    font-size: 13px;
+    color: #888;
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pill {
+    padding: 8px 16px;
+    border: 1px solid #e0d9cb;
+    border-radius: 20px;
+    background: transparent;
+    color: #555;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.pill.active {
+    background-color: #6a5e39;
+    color: #fff;
+    border-color: #6a5e39;
+}
+
+/* Radio Buttons */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-mark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.radio-container input:checked ~ .radio-mark {
+    border: 5px solid #6a5e39;
+}
+
+/* Input with icon */
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0d9cb;
+    border-radius: 8px;
+    background: #fff;
+    outline: none;
+}
+
+.input-with-icon span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.btn-apply {
+    width: 100%;
+    padding: 15px;
+    background-color: #5d5027; /* Dark olive green */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Main Content: The Vault */
+.vault-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.vault-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.vault-header p {
+    color: #666;
+}
+
+.view-toggles {
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e0d9cb;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #eae3d3;
+}
+
+/* Featured Card */
+.featured-card {
+    position: relative;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=1200') center/cover;
+    margin-bottom: 30px;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: #fff;
+}
+
+.card-overlay h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.tag-pill {
+    background: rgba(255,255,255,0.2);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.meta-info {
+    margin-top: 15px;
+    font-size: 13px;
+    display: flex;
+    gap: 20px;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+/* Grid Cards */
+.vault-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.recipe-card .img-container img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 15px 0;
+}
+
+.card-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-title-row h3 {
+    font-size: 1.4rem;
+}
+
+.heart-btn-small {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.card-body p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Special List Card */
+.special-card {
+    display: flex;
+    background: #f4eedd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.special-card img {
+    width: 30%;
+    object-fit: cover;
+}
+
+.special-content {
+    padding: 40px;
+    width: 70%;
+}
+
+.sub-tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.special-content h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.special-content p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.special-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.special-footer .meta {
+    display: flex;
+    gap: 40px;
+}
+
+.view-link {
+    font-weight: 600;
+    color: #5d5027;
+}
+
+/* Load More */
+.load-more-container {
+    text-align: center;
+}
+
+.btn-outline {
+    padding: 12px 30px;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Complex Footer */
+.complex-footer {
+    background-color: #ebe7de; /* Darker cream */
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    gap: 40px;
+}
+
+.footer-brand p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 250px;
+}
+
+.social-icons .icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links h4, .footer-newsletter h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.footer-newsletter p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.newsletter-input {
+    display: flex;
+}
+
+.newsletter-input input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    width: 100%;
+}
+
+.newsletter-input button {
+    padding: 10px 15px;
+    background: #5d5027;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .collection-container {
+        grid-template-columns: 1fr;
+    }
+    .complex-footer {
+        grid-template-columns: 1fr;
+    }
+    .special-card {
+        flex-direction: column;
+    }
+    .special-card img {
+        width: 100%;
+        height: 250px;
+    }
+    .special-content {
+        width: 100%;
+    }
+}

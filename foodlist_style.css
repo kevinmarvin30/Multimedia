@@ -1,0 +1,372 @@
+/* Base Styles & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fdfaf6; /* Lighter cream/off-white background */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #1a1a1a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    border-bottom: 1px solid #f0ead6;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: #dfd8c8; /* Very subtle text to match design or use a real logo image */
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+}
+
+.nav-links a.active {
+    color: #555;
+    font-weight: 600;
+    border-bottom: 2px solid #555;
+    padding-bottom: 4px;
+}
+
+.nav-icons .icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Page Header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0 40px;
+    border-bottom: 1px solid #f0ead6;
+    margin-bottom: 40px;
+}
+
+.header-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    color: #666;
+    font-size: 14px;
+    max-width: 500px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #d8cba9; /* Olive/gold tone */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #eee9dd;
+    color: #555;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Layout Grid */
+.pantry-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+    padding-bottom: 80px;
+}
+
+/* Left Column - The Fresh Market */
+.section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.section-top h2 {
+    font-size: 1.6rem;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #8c7b4f;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* List Cards */
+.list-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.list-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f0ead6;
+    padding-bottom: 10px;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #444;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.checkbox-wrapper input:checked ~ .checkmark {
+    background-color: #8c7b4f;
+    border-color: #8c7b4f;
+}
+
+.recipe-tag {
+    background-color: #f5eedf;
+    color: #666;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Banner */
+.inspiration-banner {
+    height: 200px;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), 
+                url('https://images.unsplash.com/photo-1595859703054-94944d18728b?w=800') center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.banner-content h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.banner-content p {
+    font-size: 13px;
+    color: #ddd;
+}
+
+/* Right Column - Widgets */
+.widget-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.widget-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.meal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meal-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.meal-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.meal-info h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.meal-info p {
+    font-size: 11px;
+    color: #888;
+}
+
+/* Digital Pantry Widget */
+.pantry-widget {
+    background-color: #f9f6ef; /* Slightly darker cream for this specific widget */
+}
+
+.widget-desc {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.pantry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.pantry-pill {
+    font-size: 11px;
+    color: #555;
+    border: 1px solid #d5cebe;
+    padding: 5px 12px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pantry-pill small {
+    color: #8c7b4f;
+    font-weight: bold;
+}
+
+.add-pantry-action {
+    border-top: 1px dashed #d5cebe;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.btn-dashed {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #f3efdf;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pantry-layout {
+        grid-template-columns: 1fr;
+    }
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

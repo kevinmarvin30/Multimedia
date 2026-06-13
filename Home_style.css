@@ -1,0 +1,223 @@
+/* Base Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fbf9f6; /* Warna cream khas desain */
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fbf9f6;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 600px;
+    margin: 0 2%;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.1) 60%), url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1200') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.badge {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #e8c37d;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #eaeaea;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background-color: #e8c37d;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-icon {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Common Section Styles */
+section {
+    padding: 60px 5%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+}
+
+/* Explore Mood Grid */
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.mood-card {
+    height: 250px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: #fff;
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Trending Recipes */
+.trending-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.recipe-card.horizontal {
+    display: flex;
+}
+
+.recipe-card.horizontal img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.recipe-card.vertical img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.tag {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.card-info h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 5%;
+    border-top: 1px solid #eaeaea;
+    margin-top: 50px;
+}
+
+.footer-left {
+    max-width: 300px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}

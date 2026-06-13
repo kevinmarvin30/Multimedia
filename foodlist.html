@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provisions & Pantry - CulinaryArt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="foodlist_style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Cook2Go</div>
+        <nav class="nav-links">
+            <a href="categories.html">Categories</a>
+            <a href="collection.html">My Collection</a>
+            <a href="foodlist.html" class="active">Food List</a>
+        </nav>
+        <div class="nav-icons">
+            <button class="icon-btn">👤</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <header class="page-header">
+            <div class="header-text">
+                <h1>Provisions & Pantry</h1>
+                <p>Your culinary inventory, carefully curated for the week ahead. Syncs automatically with your planned menus.</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-primary">🛒 Add to Cart</button>
+                <button class="btn-icon">🖨️</button>
+                <button class="btn-icon">🔗</button>
+            </div>
+        </header>
+
+        <div class="pantry-layout">
+            
+            <section class="main-column">
+                <div class="section-top">
+                    <h2>🛍️ The Fresh Market</h2>
+                    <button class="btn-text">⟳ Auto-Add from Recipes</button>
+                </div>
+
+                <div class="list-card">
+                    <h3>Produce</h3>
+                    <div class="list-items">
+                        <label class="list-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Heirloom Tomatoes (2 lbs)
+                            </div>
+                            <span class="recipe-tag">For Summer Gazpacho</span>
+                        </label>
+                        
+                        <label class="list-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Fresh Basil (1 bunch)
+                            </div>
+                        </label>
+
+                        <label class="list-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Meyer Lemons (4)
+                            </div>
+                            <span class="recipe-tag">For Lemon Risotto</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="list-card">
+                    <h3>Dairy & Refrigerated</h3>
+                    <div class="list-items">
+                        <label class="list-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Parmigiano Reggiano (8 oz)
+                            </div>
+                        </label>
+                        
+                        <label class="list-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Heavy Cream (1 pint)
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="inspiration-banner">
+                    <div class="banner-content">
+                        <h3>Market Inspiration</h3>
+                        <p>Seasonal freshness delivered weekly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="sidebar-column">
+                
+                <div class="widget-card">
+                    <h3>📅 Planned Meals</h3>
+                    <div class="meal-list">
+                        <div class="meal-item">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=150" alt="Gazpacho">
+                            <div class="meal-info">
+                                <h4>Summer Gazpacho</h4>
+                                <p>Dinner • Tomorrow</p>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <img src="https://images.unsplash.com/photo-1633964913295-ceb43826e7cf?w=150" alt="Risotto">
+                            <div class="meal-info">
+                                <h4>Lemon Risotto</h4>
+                                <p>Dinner • Friday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget-card pantry-widget">
+                    <h3>📦 My Digital Pantry</h3>
+                    <p class="widget-desc">Items you already have in stock.</p>
+                    
+                    <div class="pantry-tags">
+                        <span class="pantry-pill">Olive Oil <small>✓</small></span>
+                        <span class="pantry-pill">Sea Salt <small>✓</small></span>
+                        <span class="pantry-pill">Arborio Rice <small>✓</small></span>
+                        <span class="pantry-pill">Garlic <small>✓</small></span>
+                    </div>
+
+                    <div class="add-pantry-action">
+                        <button class="btn-dashed">+ Add to Pantry</button>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p>© 2024 CulinaryArt. Modern Organic Cooking.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#">Culinary Tips</a>
+            <a href="#">Newsletter Signup</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+<script>
+    const userId = 1; 
+
+    async function loadPantry() {
+        try {
+            const response = await fetch(`/api/pantry/${userId}`);
+            const result = await response.json();
+            
+            if (result.success) {
+                console.log("Data Pantry Berhasil Diterima:", result.data);
+            }
+        } catch (error) {
+            console.error("Gagal memuat data pantry:", error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadPantry);
+</script>
+</body>
+</html>
